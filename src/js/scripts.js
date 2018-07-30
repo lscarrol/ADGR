@@ -25,6 +25,16 @@ function showSlides(n) {
   dots[slideIndex-1].className += " active";
 }
 
-$(function() {
-    $('body').removeClass('fade-out');
+
+
+
+$(window).scroll(function() {
+	var $height = $(window).scrollTop();
+  var grab = document.getElementById("divb");
+  console.log($height);
+  if($height > 10) {
+		grab.classList.add("blurr");
+	} else {
+    grab.removeCLass('blurr');
+	}
 });

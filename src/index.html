@@ -1,4 +1,5 @@
 <!DOCTYPE HTML>
+<script type="text/javascript" src="../src/js/jq.js"></script>
 <html>
   <head>
     <title> ADGR TEMPLETE 1 </title>
@@ -11,23 +12,22 @@
     document.body.className = 'fade';
   </script>
 
-  <div class="header">
-    <h1> ADG&R </h1>
-  </div>
-  <div class="header_2">
-
-    <div class="nav">
-      <a href="#">HOME</a>
-      <a href="#">ABOUT US</a>
-      <a href="#">NEWS</a>
-      <a href="#">PARTNERS</a>
-      <a href="#">ATTORNEYS</a>
-      <a href="#">CONTACT</a>
-      <a href="#">CASES</a>
-      <a href="#">JOIN</a>
+  <div id="divb" class="till"></div>
+  <div class="docScroller">
+    <div class="page header_2">
+      <div class="nav">
+        <a href="#">HOME</a>
+        <a href="#">ABOUT US</a>
+        <a href="#">NEWS</a>
+        <a href="#">PARTNERS</a>
+        <a href="#">ATTORNEYS</a>
+        <a href="#">CONTACT</a>
+        <a href="#">CASES</a>
+        <a href="#">JOIN</a>
+      </div>
     </div>
-    </div>
-    <div class="slideshow-container">
+    <div class="about"> ABOUT US</div>
+    <div class="page slideshow-container">
       <div class="mySlides fade">
         <div class="numbertext"></div>
         <img src='styling/css/images/street.jpg' style="width:100%">
@@ -47,6 +47,9 @@
       <span class="dot" onclick="currentSlide(2)"></span>
       <span class="dot" onclick="currentSlide(3)"></span>
     </div>
+    <div class="about"> ABOUT US</div>
+   </div>
+
     <script>
       document.addEventListener("DOMContentLoaded", function(e) {
         document.body.className = '';
