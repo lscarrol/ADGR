@@ -7,13 +7,9 @@
     <link rel="stylesheet" href="../src/styling/css/styles.css" />
     <link href="https://fonts.googleapis.com/css?family=Cinzel" rel="stylesheet">
   </head>
-  <body>
-  <script>
-    document.body.className = 'fade';
-  </script>
-
+  <body id="bod">
   <div id="divb" class="till"></div>
-  <div class="docScroller">
+  <div id="helper" class="docScroller">
     <div class="page header_2">
       <div class="nav">
         <a href="#">HOME</a>
@@ -26,7 +22,8 @@
         <a href="#">JOIN</a>
       </div>
     </div>
-    <div class="about"> ABOUT US</div>
+    <div class="page about"> ABOUT US</div>
+    <!--
     <div class="page slideshow-container">
       <div class="mySlides fade">
         <div class="numbertext"></div>
@@ -47,9 +44,12 @@
       <span class="dot" onclick="currentSlide(2)"></span>
       <span class="dot" onclick="currentSlide(3)"></span>
     </div>
-    <div class="about"> ABOUT US</div>
+  -->
+    <div id="test1" class="page about"> ABOUT US</div>
+    <div class="page about"> ABOUT US</div>
+    <div class="page about"> ABOUT US</div>
+    <div class="page about"> ABOUT US</div>
    </div>
-
     <script>
       document.addEventListener("DOMContentLoaded", function(e) {
         document.body.className = '';

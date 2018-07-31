@@ -1,3 +1,4 @@
+/*
 var slideIndex = 1;
 showSlides(slideIndex);
 
@@ -24,17 +25,22 @@ function showSlides(n) {
   slides[slideIndex-1].style.display = "block";
   dots[slideIndex-1].className += " active";
 }
-
-
-
-
-$(window).scroll(function() {
-	var $height = $(window).scrollTop();
-  var grab = document.getElementById("divb");
-  console.log($height);
-  if($height > 10) {
-		grab.classList.add("blurr");
-	} else {
-    grab.removeCLass('blurr');
-	}
-});
+*/
+/*
+var interval = setInterval(function() {
+  console.log($("divb").scrollTop());
+}, 250);
+*/
+var dive = document.getElementById('helper');
+var dive1 = document.getElementsByClassName("till");
+var blurb = document.getElementsByClassName("blurr");
+var testa = helper.scrollTop;
+setInterval( function() {
+  if ((helper.scrollTop) > 500) {
+    console.log("asdasd");
+    $(dive1).addClass('blurr');
+    // Do your thang!
+  } else {
+    $(dive1).removeClass('blurr');
+  }
+}, 250 );
