@@ -36,7 +36,7 @@ var dive1 = document.getElementsByClassName("till");
 var blurb = document.getElementsByClassName("blurr");
 var testa = helper.scrollTop;
 setInterval( function() {
-  if ((helper.scrollTop) > 500) {
+  if ((helper.scrollTop) > 300) {
     console.log("asdasd");
     $(dive1).addClass('blurr');
     // Do your thang!

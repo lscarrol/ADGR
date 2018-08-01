@@ -41,22 +41,27 @@ body.fade {
   background-size: cover;
   transform: scale(1.1);
   position: absolute; top: 0; right: 0; bottom: 0; left: 0;
+  -webkit-transition: .35s -webkit-filter linear;
+  -moz-transition: .35s -moz-filter linear;
+  -o-transition: .35s -o-filter linear;
+  transition: .35s -webkit-filter linear;
 }
 
 .blurr {
-  -webkit-filter: blur(8px);
-  -moz-filter: blur(8px);
-  -o-filter: blur(8px);
-  -ms-filter: blur(8px);
-  filter: blur(8px)
+  -webkit-filter: blur(25px);
+  -moz-filter: blur(25px);
+  -o-filter: blur(25px);
+  -ms-filter: blur(25px);
+  filter: blur(25px);
+  -webkit-transition: 1s -webkit-filter linear;
+  -moz-transition: 1s -moz-filter linear;
+  -o-transition: 1s -o-filter linear;
+  transition: 1s -webkit-filter linear;
 }
 
-.page {
-  float: center;
-  width: 100vw;
-}
 
 .docScroller {
+  flex-flow: column;
   text-align: center;
   overflow-x: hidden;
   position: absolute;
@@ -69,10 +74,32 @@ body.fade {
   scroll-snap-destination: 100% 0%;
 }
 
+.page {
+  scroll-snap-align: start;
+  float: center;
+  width: 100vw;
+
+}
+
+.box {
+  margin: 30px;
+  background-color: #ffffff;
+  border: 1px solid black;
+  opacity: 0.6;
+  height: calc(100vh - 60px);
+  width: calc(100vw - 80px);
+  filter: alpha(opacity=60); /* For IE8 and earlier */
+}
+
+.effect1{
+    -webkit-box-shadow: 0 10px 6px -6px #777;
+       -moz-box-shadow: 0 10px 6px -6px #777;
+            box-shadow: 0 10px 6px -6px #777;
+}
+
 .header {
 
   border-bottom: 1px solid black;
-  padding-bottom: 5px;
   font-family: 'Cinzel', serif;
   font-size: 1.75em;
   height: 90px;
@@ -90,16 +117,115 @@ body.fade {
   font-size: 1em;
 }
 
+.header_3 {
+  border-bottom: 1px solid black;
+  font-family: 'Andale Mono', monospace;
+  font-size: 2em;
+  text-align: left;
+  height: 40px;
+}
+
 .about {
-  padding-bottom: 5px;
+  margin-top: 200px;
   font-family: 'Cinzel', serif;
   font-size: 1.75em;
+  height: calc(100vh - 220px);
 
+
+}
+
+.about h1 {
+  font-family: 'Cinzel', serif;
+  font-size: 1em;
   text-align: center;
-  height: 100vh;
+
+}
+
+.about p {
+  /*
+  border-bottom: 1px solid black;
+  border-top: 1px solid black;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  */
+  color: #ffffff;
+  font-size: 1em;
+  text-alight: center;
+  margin-left: 50px;
+  font-family: "Palatino Linotype", "Book Antiqua", 'Palatino', serif;
+  margin-right: 50px;
+
+}
+.team {
+  float: left;
+  height: 50%;
+}
+.team h2 {
+  font-family: 'Cinzel', serif;
+  font-size: 1.5em;
+  text-align: left;
+  color: black;
+  margin-left: 40px;
+}
+
+.team p {
+  color: #ffffff;
+  font-size: 1em;
+  text-alight: center;
+  margin-left: 40px;
+  font-family: "Palatino Linotype", "Book Antiqua", 'Palatino', serif;
+  margin-right: 70px;
+}
+
+.team img {
+  float: left;
+}
+
+.team1 {
+  float: right;
+  height: 50%;
+}
+.team1 h2 {
+  font-family: 'Cinzel', serif;
+  font-size: 1.5em;
+  text-align: right;
+  color: black;
+  margin-right: 70px;
+}
+
+.team1 p {
+  color: #ffffff;
+  font-size: 1em;
+  text-alight: center;
+  margin-left: 20px;
+  font-family: "Palatino Linotype", "Book Antiqua", 'Palatino', serif;
+  margin-right: 70px;
+}
+
+.team1 img {
+  float: right;
+}
+
+.card {
+    /* Add shadows to create the "card" effect */
+    float: left;
+    width: 12%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+}
+
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+/* Add some padding inside the card container */
+.container {
+    padding: 2px 16px;
 }
 
 .nav {
+  height: calc(100vh - 56px);
   margin:0 auto;
   overflow: hidden;
   width: 770px;
