@@ -53,10 +53,10 @@ body.fade {
   -o-filter: blur(25px);
   -ms-filter: blur(25px);
   filter: blur(25px);
-  -webkit-transition: 1s -webkit-filter linear;
-  -moz-transition: 1s -moz-filter linear;
-  -o-transition: 1s -o-filter linear;
-  transition: 1s -webkit-filter linear;
+  -webkit-transition: .35s -webkit-filter linear;
+  -moz-transition: .35s -moz-filter linear;
+  -o-transition: .35s -o-filter linear;
+  transition: .35s -webkit-filter linear;
 }
 
 
@@ -156,9 +156,58 @@ body.fade {
   margin-right: 50px;
 
 }
+
+
+@keyframes bounce {
+  from,
+  20%,
+  53%,
+  80%,
+  to {
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    transform: translate3d(0, 0, 0);
+  }
+
+  40%,
+  43% {
+    animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    transform: translate3d(0, -30px, 0);
+  }
+
+  70% {
+    animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    transform: translate3d(0, -15px, 0);
+  }
+
+  90% {
+    transform: translate3d(0, -4px, 0);
+  }
+}
+
+.bounce {
+  animation-name: bounce;
+  transform-origin: center bottom;
+}
+
+.arrow {
+  text-align: center;
+  color: white;
+  font-size: 4em;
+  text-shadow: 0 8px 30px 0 black;
+}
+
 .team {
   float: left;
   height: 50%;
+}
+
+.team h1 {
+  color: black;
+  font-size: 2em;
+  text-alight: center;
+  font-family: "Palatino Linotype", "Book Antiqua", 'Palatino', serif;
+
+
 }
 .team h2 {
   font-family: 'Cinzel', serif;
@@ -225,7 +274,7 @@ body.fade {
 }
 
 .nav {
-  height: calc(100vh - 56px);
+  height: calc(100vh - 130px);
   margin:0 auto;
   overflow: hidden;
   width: 770px;
