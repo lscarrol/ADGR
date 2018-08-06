@@ -31,13 +31,13 @@ var interval = setInterval(function() {
   console.log($("divb").scrollTop());
 }, 250);
 */
+var abc = document.getElementById('bod');
 var dive = document.getElementById('helper');
 var dive1 = document.getElementsByClassName("till");
 var blurb = document.getElementsByClassName("blurr");
 var testa = helper.scrollTop;
 setInterval( function() {
   if ((helper.scrollTop) > 300) {
-    console.log("asdasd");
     $(dive1).addClass('blurr');
     // Do your thang!
   } else {
@@ -45,10 +45,8 @@ setInterval( function() {
   }
 }, 250 );
 
+var op = document.getElementById('scrollH');
 
-$(function() {
-  $('a[href*=#]').on('click', function(e) {
-    e.preventDefault();
-    $('html, body').animate({ scrollTop: $($(this).attr('href')).offset().top}, 500, 'linear');
-  });
-});
+op.onclick = function() {
+  $(dive).scrollTo(300);
+}
