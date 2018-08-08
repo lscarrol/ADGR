@@ -46,7 +46,19 @@ setInterval( function() {
 }, 250 );
 
 var op = document.getElementById('scrollH');
+var $addVal = helper.scrollTop + 800;
+$addVal: $addVal * '1px';
 
-op.onclick = function() {
-  $(dive).scrollTo(300);
+$(op).click(function() {
+  $addVal = helper.scrollTop + 750;
+  $(helper).animate({ scrollTop: $addVal });
+});
+
+
+function initMap() {
+  var mapCanvas = document.getElementById("map");
+  var mapOptions = {
+    center: new google.maps.LatLng(40.706315, -74.013175), zoom: 10
+  };
+  var map = new google.maps.Map(mapCanvas, mapOptions);
 }
