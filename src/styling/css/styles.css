@@ -19,9 +19,6 @@ https://alvarotrigo.com/fullPage/extensions/continuous-horizontal.html?section=c
 */
 
 
-@media all and (max-width: 800px) {
-  .nav {display: none;}
-}
 
 
 
@@ -95,7 +92,7 @@ body.fade {
   background-color: #ffffff;
   border: 1px solid black;
   opacity: 0.6;
-  height: calc(100vh - 60px);
+  height: 100%;
   width: calc(100vw - 80px);
   filter: alpha(opacity=60); /* For IE8 and earlier */
 }
@@ -110,27 +107,25 @@ body.fade {
 
   border-bottom: 1px solid black;
   font-family: 'Cinzel', serif;
-  font-size: 1.75em;
-  height: 90px;
+  font-size: 3vw;
   text-align: left;
 }
 .header_2 {
-  padding: 0px;
   background-image: url("..///scss/images/NYC5.jpg");
   width: 100%;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  height: calc(100vh - 60px);
+  height: calc(100vh - 70px);
 }
 .header h2 {
-  font-size: 1em;
+  font-size: 1vw;
 }
 
 .header_3 {
   border-bottom: 1px solid black;
   font-family: 'Andale Mono', monospace;
-  font-size: 2em;
+  font-size: 2.5vw;
   text-align: left;
   height: 40px;
   margin-left: 12px;
@@ -138,17 +133,16 @@ body.fade {
 }
 
 .about {
-  margin-top: 200px;
   font-family: 'Cinzel', serif;
-  font-size: 1.75em;
-  height: calc(100vh - 220px);
+  font-size: 1.75vw;
+  height: 100%;
 
 
 }
 
 .about h1 {
   font-family: 'Cinzel', serif;
-  font-size: 1em;
+  font-size: 2vw;
   text-align: center;
 
 }
@@ -160,8 +154,8 @@ body.fade {
   border-left: 1px solid black;
   border-right: 1px solid black;
   */
+  font-size: 1.5vw;
   color: #ffffff;
-  font-size: 1em;
   text-alight: center;
   margin-left: 50px;
   font-family: "Palatino Linotype", "Book Antiqua", 'Palatino', serif;
@@ -222,27 +216,19 @@ body.fade {
 .arrow {
   text-align: center;
   color: white;
-  font-size: 4em;
+  font-size: 4vw;
   text-shadow: 0 8px 30px 0 black;
 }
 .teamcon {
   height: 100%;
-  width: 20000px;
-  float: left;
-  overflow-x: auto;
-  overflow-y: hidden
-  scroll-snap-coordinate: 0 0;
-  scroll-snap-points-x: repeat(20000px);
-  scroll-snap-type:mandatory;
+  width: 100vw;
 }
 
 
 .teamcon2 {
   width: 100vw;
-  height: 100vh;
-  display: inline-block;
+  height: 100%;
   float: left;
-  scroll-snap-align: start;
 
 }
 .team {
@@ -253,16 +239,16 @@ body.fade {
 
 
 .team h1 {
+  font-family: 'Cinzel', serif;
+  font-size: 1.5vw;
+  text-align: center;
   color: black;
-  font-size: 2em;
-  text-alight: center;
-  font-family: "Palatino Linotype", "Book Antiqua", 'Palatino', serif;
-
-
+  margin-right: 70px;
+  margin-left: 40px;
 }
 .team h2 {
   font-family: 'Cinzel', serif;
-  font-size: 1.5em;
+  font-size: 1.5vw;
   text-align: left;
   color: black;
   margin-left: 40px;
@@ -270,7 +256,7 @@ body.fade {
 
 .team p {
   color: #ffffff;
-  font-size: 1em;
+  font-size: 1.25vw;
   text-alight: center;
   margin-left: 40px;
   font-family: "Palatino Linotype", "Book Antiqua", 'Palatino', serif;
@@ -285,9 +271,19 @@ body.fade {
   float: right;
   height: 50%;
 }
+
+.team1 h1 {
+  font-family: 'Cinzel', serif;
+  font-size: 1.5vw;
+  text-align: center;
+  color: black;
+  margin-right: 70px;
+  margin-left: 40px;
+}
+
 .team1 h2 {
   font-family: 'Cinzel', serif;
-  font-size: 1.5em;
+  font-size: 1.5vw;
   text-align: right;
   color: black;
   margin-right: 70px;
@@ -296,7 +292,7 @@ body.fade {
 
 .team1 p {
   color: #ffffff;
-  font-size: 1em;
+  font-size: 1.25vw;
   text-alight: center;
   margin-left: 40px;
   font-family: "Palatino Linotype", "Book Antiqua", 'Palatino', serif;
@@ -336,31 +332,34 @@ body.fade {
 }
 
 
+.meetcon {
+  width: 100vw;
+  height: 100%;
 
-
-
-
-
-
-
-
-.card {
-    /* Add shadows to create the "card" effect */
-    float: left;
-    width: 12%;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    transition: 0.3s;
 }
 
-/* On mouse-over, add a deeper shadow */
-.card:hover {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+.meetcon2 {
+  width: 100%;
+  height: 50%;
+  padding: 20px;
 }
 
-/* Add some padding inside the card container */
-.container {
-    padding: 2px 16px;
+
+.meetcard {
+  float: left;
+  width: 25%;
+  height: 100%;
+  padding: 15px;
 }
+
+.meetcard p {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  background-color: white;
+  margin: 10px;
+  width: 100%;
+  height: 100%;
+}
+
 
 .nav {
   height: calc(100vh - 130px);
@@ -378,6 +377,7 @@ body.fade {
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
+  font-size: 1vw;
 }
 
 .nav a:hover {
